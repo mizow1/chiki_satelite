@@ -1,0 +1,195 @@
+<!--{* 十大主星/十二徒星★陽占図パート *}-->
+<!--{if $contents_data.target_count == 1}-->
+<div class="ow_result_item ow_star">
+	<div class="ow_result_item_top ow_tac">
+		<img class="ow_vab" src="img/smp/result/result_item_top.jpg" alt=""/>
+	</div>
+	<div class="ow_result_item_mid">
+		<div class="ow_result_title">
+			<div class="ow_result_title_top ow_tac"><img class="ow_vab" src="img/smp/result/result_title_top.png" alt=""/></div>
+			<div class="ow_result_title_mid"><!--{$menu_data.name}--></div>
+			<div class="ow_result_title_btm ow_tac"><img class="ow_vat" src="img/smp/result/result_title_btm.png" alt=""/></div>
+		</div>
+
+		<div class="ow_area ow_tac">
+		<!--{if empty($menu_data.pickup_flag) && ( $page_identify == $smarty.const.PAY || $page_identify == $smarty.const.FREE) }-->
+			<div class="ow_star_figure">
+				<div class="ow_star_bg">
+					<img src="img/smp/result/star_bg.jpg" alt="十大主星/十二徒星★陽占図" title="十大主星/十二徒星★陽占図">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_2">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.my_graph_2.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_twelve ow_star_figure_twelve_3">
+					<img src="img/smp/result/star/twelve/<!--{$base_data.base_list.my_graph_3}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_4">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.my_graph_4.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_5">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.my_graph_5.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_6">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.my_graph_6.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_twelve ow_star_figure_twelve_7">
+					<img src="img/smp/result/star/twelve/<!--{$base_data.base_list.my_graph_7}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_8">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.my_graph_8.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_twelve ow_star_figure_twelve_9">
+					<img src="img/smp/result/star/twelve/<!--{$base_data.base_list.my_graph_9}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_hikari ow_star_figure_hikari_<!--{$menu_data.result_category}-->">
+					<img src="img/smp/result/star/star_figure_hikari.png" alt="">
+				</div>
+			</div>
+	<!--{assign var="star_num" value=$menu_data.result_category}-->
+			<div class="ow_star_figure_mid">
+				<div class="ow_figure_result">
+	<!--{if $star_num == 3 || $star_num == 7 || $star_num == 9}-->
+					<div class="ow_star_twelve ow_tac">
+						<img src="img/smp/result/star/star_twelve.png" alt="あなたの十二大主星" title="あなたの十二大主星">
+					</div>
+	<!--{else}-->
+					<div class="ow_star_ten ow_tac">
+						<img src="img/smp/result/star/star_ten.png" alt="あなたの十大主星" title="あなたの十大主星">
+					</div>
+	<!--{/if}-->
+					<div class="ow_area_item ow_figure_result_text">
+						<!--{$base_data.base_list.my_graph_text.$star_num}-->
+					</div>
+				</div>
+			</div>
+			<div class="ow_star_figure_btm ow_tac">
+				<img class="ow_vat" src="img/smp/result/star/star_figure_btm.jpg" alt="" title="">
+			</div>
+		<!--{else}-->
+			<img src="img/smp/nc/star_bg.png" alt="有料版ではあなたの十大主星と十二大従星がわかります" title="有料版ではあなたの十大主星と十二大従星がわかります">
+		<!--{/if}-->
+
+		</div>
+		<!--/.ow_area-->
+		<div class="ow_comment_text ow_tac">
+		<!--{if empty($menu_data.pickup_flag) && ( $page_identify == $smarty.const.PAY || $page_identify == $smarty.const.FREE) }-->
+			あなたの<!--{$base_data.result_category}-->運についてのお悩みは<br/><!--{$base_data.base_list.my_graph_text.$star_num}-->が答えを導きます
+		<!--{else}-->
+			あなたの<!--{$base_data.result_category}-->運についてのお悩みは<br/>○○星が答えを導きます
+		<!--{/if}-->
+		</div>
+		<div class="ow_result_body_text">
+		<!--{if empty($menu_data.pickup_flag) && ( $page_identify == $smarty.const.PAY || $page_identify == $smarty.const.FREE) }-->
+			<!--{$menu_data.result.body}-->
+		<!--{else}-->
+			<!--{$menu_data.result.cut_body}--><br>
+			<div class="ow_nc ow_nc_white">
+				<a href="javascript:<!--{if empty($menu_data.pickup_flag)}-->gtag_submit('result','<!--{$smarty.const.GTAG_KEY}--><!--{$contents_data.id}-->');<!--{/if}-->nc_submit('astrology_form<!--{$pickup_num}-->')" class="ow_nc_btn ow_nc_btn_default"><img src="img/smp/nc/btn_nc.png" alt="続きを見る(有料)" title="続きを見る(有料)"></a>
+
+			</div>
+		<!--{/if}-->
+		</div>
+	</div>
+	<!-- /.ow_result_item_mid -->
+	<div class="ow_result_item_btm ow_tac">
+		<img class="ow_vat" src="img/smp/result/result_item_btm.jpg" alt=""/>
+	</div>
+</div>
+<!-- /.ow_result_item -->
+<!--{else}-->
+<div class="ow_result_item ow_star">
+	<div class="ow_result_item_top ow_tac">
+		<img class="ow_vab" src="img/smp/result/result_item_top.jpg" alt=""/>
+	</div>
+	<div class="ow_result_item_mid">
+		<div class="ow_result_title">
+			<div class="ow_result_title_top ow_tac"><img class="ow_vab" src="img/smp/result/result_title_top.png" alt=""/></div>
+			<div class="ow_result_title_mid"><!--{$menu_data.name}--></div>
+			<div class="ow_result_title_btm ow_tac"><img class="ow_vat" src="img/smp/result/result_title_btm.png" alt=""/></div>
+		</div>
+
+		<div class="ow_area ow_tac">
+		<!--{if empty($menu_data.pickup_flag) && ( $page_identify == $smarty.const.PAY || $page_identify == $smarty.const.FREE) }-->
+			<div class="ow_star_figure">
+				<div class="ow_star_bg">
+					<img src="img/smp/result/star_bg.jpg" alt="十大主星/十二徒星★陽占図" title="十大主星/十二徒星★陽占図">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_2">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.target_graph_2.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_twelve ow_star_figure_twelve_3">
+					<img src="img/smp/result/star/twelve/<!--{$base_data.base_list.target_graph_3}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_4">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.target_graph_4.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_5">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.target_graph_5.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_6">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.target_graph_6.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_twelve ow_star_figure_twelve_7">
+					<img src="img/smp/result/star/twelve/<!--{$base_data.base_list.target_graph_7}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_ten ow_star_figure_ten_8">
+					<img src="img/smp/result/star/ten/<!--{$base_data.base_list.target_graph_8.star_num}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_twelve ow_star_figure_twelve_9">
+					<img src="img/smp/result/star/twelve/<!--{$base_data.base_list.target_graph_9}-->.png" alt="">
+				</div>
+				<div class="ow_area_item ow_star_figure_hikari ow_star_figure_hikari_<!--{$menu_data.result_category}-->">
+					<img src="img/smp/result/star/star_figure_hikari.png" alt="">
+				</div>
+			</div>
+	<!--{assign var="star_num" value=$menu_data.result_category}-->
+			<div class="ow_star_figure_mid">
+				<div class="ow_figure_result">
+	<!--{if $star_num == 3 || $star_num == 7 || $star_num == 9}-->
+					<div class="ow_star_twelve ow_tac">
+						<img src="img/smp/result/star/star_twelve2.png" alt="あの人の十二大主星" title="あなたの十二大主星">
+					</div>
+	<!--{else}-->
+					<div class="ow_star_ten ow_tac">
+						<img src="img/smp/result/star/star_ten2.png" alt="あの人の十大主星" title="あなたの十大主星">
+					</div>
+	<!--{/if}-->
+					<div class="ow_area_item ow_figure_result_text">
+						<!--{$base_data.base_list.target_graph_text.$star_num}-->
+					</div>
+				</div>
+			</div>
+			<div class="ow_star_figure_btm ow_tac">
+				<img class="ow_vat" src="img/smp/result/star/star_figure_btm.jpg" alt="" title="">
+			</div>
+		<!--{else}-->
+			<img src="img/smp/nc/star_bg.png" alt="有料版ではあなたの十大主星と十二大従星がわかります" title="有料版ではあなたの十大主星と十二大従星がわかります">
+		<!--{/if}-->
+		</div>
+		<!--/.ow_area-->
+		<div class="ow_comment_text ow_tac">
+		<!--{if empty($menu_data.pickup_flag) && ( $page_identify == $smarty.const.PAY || $page_identify == $smarty.const.FREE) }-->
+			あなたの<!--{$base_data.result_category}-->運についてのお悩みは<br/><!--{$base_data.base_list.target_graph_text.$star_num}-->が答えを導きます
+		<!--{else}-->
+			あなたの<!--{$base_data.result_category}-->運についてのお悩みは<br/>○○星が答えを導きます
+		<!--{/if}-->
+		</div>
+		<div class="ow_result_body_text">
+		<!--{if empty($menu_data.pickup_flag) && ( $page_identify == $smarty.const.PAY || $page_identify == $smarty.const.FREE) }-->
+			<!--{$menu_data.result.body}-->
+		<!--{else}-->
+			<!--{$menu_data.result.cut_body}--><br>
+			<div class="ow_nc ow_nc_white">
+				<a href="javascript:<!--{if empty($menu_data.pickup_flag)}-->gtag_submit('result','<!--{$smarty.const.GTAG_KEY}--><!--{$contents_data.id}-->');<!--{/if}-->nc_submit('astrology_form<!--{$pickup_num}-->')" class="ow_nc_btn ow_nc_btn_default"><img src="img/smp/nc/btn_nc.png" alt="続きを見る(有料)" title="続きを見る(有料)"></a>
+
+			</div>
+		<!--{/if}-->
+		</div>
+	</div>
+	<!-- /.ow_result_item_mid -->
+	<div class="ow_result_item_btm ow_tac">
+		<img class="ow_vat" src="img/smp/result/result_item_btm.jpg" alt=""/>
+	</div>
+</div>
+<!-- /.ow_result_item -->
+<!--{/if}-->

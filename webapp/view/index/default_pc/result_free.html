@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<base href="<!--{$smarty.const.ISP_BASE_URL}-->web/">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width" />
+	<title><!--{if ISP == nifty}-->@nifty:<!--{/if}--><!--{$smarty.const.CONTENTS_NAME}-->：<!--{$contents_data.name_biglobe|default:$contents_data.name_rakuten|default:$contents_data.name}--></title>
+	<link rel="stylesheet" href="css/pc/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/pc/animation.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery1.8.js"></script>
+	<script type="text/javascript" src="js/form_submit.js"></script>
+	<script type="text/javascript" src="js/default_form_ie.js"></script>
+	<script type="text/javascript" src="js/pc/animation.js"></script>
+	<script src="js/jquery.tile.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/pc/result.js"></script>
+	<!--{include file="file:./parts/ga.html"}-->
+</head>
+<body class="ow_body">
+
+<!--{include file="file:../../../../../common/header_isp.html"}-->
+
+<div class="ow_body_bg_01">
+<div class="ow_body_bg_02">
+
+<!--{include file="file:./parts/header_menu.html"}-->
+
+
+	<div class="ow_main">
+
+		<div class="ow_bread">
+			<a href="<!--{$smarty.const.CONTENTS_URL}-->">TOP</a> &gt;
+			<a href="<!--{$smarty.const.ISP_BASE_URL}-->web/?menu=<!--{if $contents_data.id > 500 && $contents_data.id < 900}--><!--{$contents_data.id-500}--><!--{else}--><!--{$contents_data.id}--><!--{/if}-->">入力画面</a> &gt;
+<!--{if $contents_data.price_taxin > 1}-->
+			有料鑑定結果
+<!--{else}-->
+			無料鑑定結果
+<!--{/if}-->
+		</div>
+		<div class="ow_sp_contents">
+		<div class="ow_common_menu">
+			<div class="ow_common_menu_top ow_tac">
+				<img class="ow_vab" src="img/pc/common/common_menu_top.jpg" alt=""/>
+			</div>
+			<div class="ow_common_menu_mid">
+				<div class="ow_menu_head">
+					<div class="ow_menu_icon">
+						<div class="ow_menu_category"><img src="img/pc/category/<!--{$contents_data.category}-->.png" alt="<!--{$category_data[$contents_data.category].name}-->　<!--{if $contents_data.target_count == 2}-->二<!--{else}-->一<!--{/if}-->人用" title="<!--{$category_data[$contents_data.category].name}-->　<!--{if $contents_data.target_count == 2}-->二<!--{else}-->一<!--{/if}-->人用" /></div>
+					</div>
+					<div class="ow_menu_title">
+						<!--{$contents_data.name_biglobe|default:$contents_data.name_rakuten|default:$contents_data.name}-->
+					</div>
+				</div>
+			</div>
+			<div class="ow_common_menu_btm ow_tac">
+				<img class="ow_vat ow_pc_inline" src="img/pc/common/common_menu_btm.jpg" alt=""/>
+			</div>
+		</div>
+		<!-- /.ow_common_menu -->
+
+
+
+		<!-- ウェルカムメッセージ -->
+		<div class="ow_welcome">
+			<div class="ow_welcome_inr">
+				<div class="ow_welcome_bg">
+					<img class="ow_tac" src="img/pc/result/welcome_bg.jpg" alt=""/>
+				</div>
+				<div class="ow_welcome_text ow_welcome_item">
+					<img class="ow_tac" src="img/pc/result/welcome_text.png" alt="ようこそいらっしゃいました。 まず最初に生年月日から 算命学表を見てみましょう。" title="ようこそいらっしゃいました。 まず最初に生年月日から 算命学表を見てみましょう。"/>
+				</div>
+			</div>
+			<!-- /.ow_welcome_inr -->
+		</div>
+		<!-- /.ow_welcome -->
+		<div class="ow_result_wrap">
+<!--{include file="file:./parts/base.html"}-->
+
+	<!-- ▽▽▽本題ここから▽▽▽ -->
+
+<!--{foreach key=menu_id item=menu_data from=$result_item_data.menu_list}-->
+	<!--{if $menu_data.astrology_category == 1}-->
+	<!--{include file="file:./parts/result_item1.html"}-->
+	<!--{/if}-->
+	<!--{if $menu_data.astrology_category == 2}-->
+	<!--{include file="file:./parts/result_item2.html"}-->
+	<!--{/if}-->
+	<!--{if $menu_data.astrology_category == 3}-->
+	<!--{include file="file:./parts/result_item3.html"}-->
+	<!--{/if}-->
+	<!--{if $menu_data.astrology_category == 4}-->
+	<!--{include file="file:./parts/result_item4.html"}-->
+	<!--{/if}-->
+	<!--{if $menu_data.astrology_category == 5}-->
+	<!--{include file="file:./parts/result_item5.html"}-->
+	<!--{/if}-->
+	<!--{if $menu_data.astrology_category == 6}-->
+	<!--{include file="file:./parts/result_item6.html"}-->
+	<!--{/if}-->
+<!--{/foreach}-->
+
+<form id="astrology_form" name="astrology_form" method="post">
+		<input type="hidden" name="qid" value="<!--{$query_string}-->">
+</form>
+<!--{foreach key=pickup_num item=pickup from=$pickup_list}-->
+	<!--{if $pickup_num == 1}-->
+		<!--{if $contents_data.id == 13}-->
+		<div class="ow_joint_bg">
+			<img class="ow_tac" src="img/pc/result/joint_text_1.jpg" alt="タロットで近々のあなたの運命を見ました。次の鑑定では結婚の運気から、出会い結婚後の未来やあなたに訪れる障害などを「十大主星」や「天中殺」など算命学を用いて鑑定します。" title="タロットで近々のあなたの運命を見ました。次の鑑定では結婚の運気から、出会い結婚後の未来やあなたに訪れる障害などを「十大主星」や「天中殺」など算命学を用いて鑑定します。">
+		</div>
+		<!--{/if}-->
+		<!--{if $contents_data.id == 14}-->
+		<div class="ow_joint_bg">
+			<img class="ow_tac" src="img/pc/result/joint_text_3.jpg" alt="" title="">
+		</div>
+		<!--{/if}-->
+		<!--{if $contents_data.id == 15}-->
+		<div class="ow_joint_bg">
+			<img class="ow_tac" src="img/pc/result/joint_text_5.jpg" alt="" title="">
+		</div>
+		<!--{/if}-->
+	
+	<!--{elseif $pickup_num == 2}-->
+		<!--{if $contents_data.id == 13}-->
+		<div class="ow_joint_bg">
+			<img class="ow_tac" src="img/pc/result/joint_text_2.jpg" alt="" title="">
+		</div>
+		<!--{/if}-->
+		<!--{if $contents_data.id == 14}-->
+		<div class="ow_joint_bg">
+			<img class="ow_tac" src="img/pc/result/joint_text_4.jpg" alt="" title="">
+		</div>
+		<!--{/if}-->
+		<!--{if $contents_data.id == 15}-->
+
+		<!--{/if}-->
+	<!--{/if}-->
+<!--{include file="file:./parts/result_pickup.html"}-->
+<!--{/foreach}-->
+		  <!-- △△△本題ここまで△△△ -->
+<!-- ▼▼▼TOPページおすすめメニュー移植▼▼▼ -->
+<!--{include file="file:./parts/recommend.html"}-->
+<!-- ▲▲▲TOPページおすすめメニュー移植▲▲▲ -->
+		</div>
+		<!-- /.ow_result_wrap -->
+			</div>
+			<!--{include file="file:./parts/footer_menu.html"}-->
+			</div>
+			<!-- /.ow_main -->
+
+		</div>
+	</div>
+</body>
+</html>

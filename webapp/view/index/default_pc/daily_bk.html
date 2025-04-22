@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<base href="<!--{$smarty.const.ISP_BASE_URL}-->web/">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width" />
+	<title><!--{if ISP == nifty}-->@nifty:<!--{/if}-->監修者・占術紹介｜<!--{$smarty.const.CONTENTS_NAME}--></title>
+	<link rel="stylesheet" href="css/pc/common.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery1.8.js"></script>
+	<script type="text/javascript" src="js/form_submit.js"></script>
+	<script src="js/jquery.tile.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/pc/profile.js"></script>
+	<meta name="description" content="冬月式【極】算命学では生年月日から割り出される十干 · 十大主星· 十二大従星から運命を当て尽くします。2人の繋がりがわかる相性占いでは、タロット占いを合わせて使うことで2人の本質や関係性、恋愛相性、結婚相性、夫婦相性など相手との全相性を高精度で鑑定します。">
+	<!--{include file="file:./parts/ga.html"}-->
+</head>
+<body class="ow_body">
+
+<!--{include file="file:../../../../../common/header_isp.html"}-->
+<div class="ow_body_bg_01">
+<div class="ow_body_bg_02">
+
+<!--{include file="file:./parts/header_menu.html"}-->
+
+	<div class="ow_main">
+
+
+<!--{foreach $api_data as $data }-->
+
+<!--{* var_dump($data) *}-->
+
+	順位：<!--{$data.ranking}--><br>
+	総合：<!--{$data.sougou_point}--><br>
+	<!--{$data.sougou_body}--><br>
+	恋愛：<!--{$data.renai_point}--><br>
+	<!--{$data.renai_body}--><br>
+	出会い：<!--{$data.deai_point}--><br>
+	<!--{$data.deai_body}--><br>
+	金運：<!--{$data.kinun_point}--><br>
+	<!--{$data.kinun_body}--><br>
+	仕事：<!--{$data.sigoto_point}--><br>
+	<!--{$data.sigoto_body}--><br>
+	対人：<!--{$data.taijin_point}--><br>
+	<!--{$data.taijin_body}--><br>
+
+
+<!--{/foreach}-->
+	</div>
+
+
+<!--{include file="file:./parts/footer_menu.html"}-->
+	</div>
+</div>
+</body>
+</html>

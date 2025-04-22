@@ -1,0 +1,126 @@
+<?php /* Smarty version 2.6.18, created on 2023-12-13 19:25:22
+         compiled from file:./parts/sample.html */ ?>
+<!-- ow_about -->
+<div class="ow_about" id="about">
+	<div class="ow_about_top ow_tac">
+		<img class="ow_vab" src="img/pc/profile/about_top.jpg" alt="占術紹介" title="占術紹介">
+	</div>
+	<div class="ow_about_mid">
+		<div class="ow_about_mitibiku">
+			<div class=" ow_about_aura">
+				<img class="ow_vab" src="img/pc/profile/about_aura.png" alt=""/>
+			</div>
+			<div class="ow_about_item ow_about_text">
+				<img class="ow_vab" src="img/pc/profile/about_text.png" alt="中国紀元前から続く算命学を 冬月のオリジナルの観点で読み解き 真実に導きます―。" title="中国紀元前から続く算命学を 冬月のオリジナルの観点で読み解き 真実に導きます―。"/>
+			</div>
+		</div>
+
+		<div class="ow_type_fortune ow_type_fortune_1">
+			<div class="ow_type_fortune_image_1">
+				<img src="img/pc/profile/type_fortune_image_1.jpg" alt="真実と運命を見抜く―　運命干支算術　SAMPLE" title="真実と運命を見抜く―　運命干支算術　SAMPLE">
+			</div>
+			<div class="ow_profile_text">
+				<div class="ow_profile_text_top ow_tac">
+					<img src="img/pc/profile/profile_text_top.png" alt="">
+				</div>
+				<div class="ow_profile_frame_text">
+					算命学とは、約二千三百年前の古代中国の存在論、陰陽五行思想から生まれた、道徳的な一面のある占いです。生まれた年と月と日の干支から「運命を算出する学問」とも言えます。個人に与えられた特性や性格、人生のバイオリズムといった宿命を読み解くことができ、人生の道しるべとなってくれるでしょう。<br>
+					<br>
+					冬月式算命学では、まず、生まれた時に与えられた十二支から、自覚しやすいあなたについて視ていきます。<br>
+					<br>
+					日＝自分・身近な人との関わり方・家庭観・結果<br>
+					月＝精神・（無意識の）心・家系<br>
+					年＝社会(仕事・学校)・スタート<br>
+					<br>
+					自分は日々変わっていきますが、その日(自分)の積み重ねが月(精神)となり、それが年(社会との関係)になるのです。<br>
+				</div>
+				<div class="ow_profile_text_btm ow_tac" >
+					<img src="img/pc/profile/profile_text_btm.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- /ow_type_fortune_1 -->
+
+		<div class="ow_type_fortune ow_type_fortune_2">
+			<div class="ow_type_fortune_image_2">
+				<img src="img/pc/profile/type_fortune_image_2.jpg" alt="十大主星/十二大従星★陽占図　SAMPLE" title="十大主星/十二大従星★陽占図　SAMPLE">
+			</div>
+			<div class="ow_profile_text">
+				<div class="ow_profile_text_top ow_tac">
+					<img src="img/pc/profile/profile_text_top.png" alt="">
+				</div>
+				<div class="ow_profile_frame_text">
+					十大主星（じゅうだいしゅせい）とは、自分の魂を表す主気と、他の気の力関係のことです。十大主星を知ることにより、自分の中にある様々な性質を知ることができます。算命学では、まず生年月日を基に60種類の干支で宿命図が示され、その中にある干(甲・乙・丙・丁・戊・己・庚・辛・壬・癸)から十大主星を算出します。干は「かん」と呼ばれます。<br>
+					<br>
+					干（精神気）主気・月干・年干<br>
+					支（時間枠）日支・月支・年支<br>
+					<br>
+					<br>
+					精神のスタートは月干。心は行動本能と人間的意識の交点にあるもので、心とは無自覚的に作られていく本能と理性の所産です。月支は宿命の中央に位置しながら、そこでの気の役割を自覚しきれないという特徴があります。日支はたどり着く場所で、現実生活は日支に蓄積されて行きます。<br>
+					<br>
+					十大主星は、気の力関係を割り出し、性格、恋愛傾向、家庭観、天職、親縁、子縁、人間関係、など個々の宿命を読み解きます。<br>
+				</div>
+				<div class="ow_profile_frame_text">
+					十二大従星（じゅうにだいじゅうせい）は、人間のエネルギーの盛衰を12の世代で分類し、それぞれの世代の特徴を星で表したものです。<br>
+					<br>
+					通常、人間の一生は生まれてから死ぬまでの間をいいますが、十二大従星では、母体の中にいる時から死後の世界に至るまでの期間を一生と考えています。<br>
+					<br>
+					12種類のエネルギーは、人生を3分割して3つ与えられています。<br>
+					<br>
+					<br>
+					右上「初年期」にある星は誕生～30歳くらい、<br>
+					右下「中年期」にある星は31歳～55歳くらい、<br>
+					左下「晩年期」にある星は56歳～最後までです。<br>
+				</div>
+				<div class="ow_profile_text_btm ow_tac">
+					<img src="img/pc/profile/profile_text_btm.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- /ow_type_fortune_2 -->
+
+		<div class="ow_type_fortune ow_type_fortune_1">
+			<div class="ow_type_fortune_image_3">
+				<img src="img/pc/profile/type_fortune_image_3.jpg" alt="あなたの天中殺　SAMPLE" title="あなたの天中殺　SAMPLE">
+			</div>
+			<div class="ow_profile_text">
+				<div class="ow_profile_text_top ow_tac">
+					<img src="img/pc/profile/profile_text_top.png" alt="">
+				</div>
+				<div class="ow_profile_frame_text">
+					冬月式算命学では天中殺という時期と性質を重要視します。天中殺とは、12年に1度、2年間。12カ月に2カ月というペースで、天が味方をしてくれない、時間と空間が不自然になる時期のことです。天中殺は誰にでも平等に訪れます。<br>
+					<br>
+					子丑・寅卯・辰巳・午未・申酉・戌亥の6種類の中から、自分がどの天中殺に属しているかを事前に知ることにより、災いを避ける事ができ、さらに、生きる道しるべを見出すことができます。<br>
+				</div>
+				<div class="ow_profile_text_btm ow_tac">
+					<img src="img/pc/profile/profile_text_btm.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- /ow_type_fortune_3 -->
+
+		<div class="ow_type_fortune ow_type_fortune_4">
+			<div class="ow_type_fortune_image_4">
+				<img src="img/pc/profile/type_fortune_image_4.jpg" alt="冬月式タロットカード　SAMPLE" title="冬月式タロットカード　SAMPLE">
+			</div>
+			<div class="ow_profile_text">
+				<div class="ow_profile_text_top ow_tac">
+					<img src="img/pc/profile/profile_text_top.png" alt="">
+				</div>
+				<div class="ow_profile_frame_text">
+					算命学では、あなたの本質や人生の流れを読み取ることができます。しかし、感情や日々の出来事など、細かい人間の心をとらえにくいところがあります。<br>
+					<br>
+					そのため、タロットカードで「相手の今の気持ち」や「1年以内の運命」について視ることで、占いの精度を高めることができるのです。<br>
+					<br>
+					冬月式では、精度の高い算命学と繊細な今を映し出すタロットカードを使うことで、あなたの悩みや質問に、より具体的で鮮明な答えを導き出します。<br>
+				</div>
+				<div class="ow_profile_text_btm ow_tac">
+					<img src="img/pc/profile/profile_text_btm.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- /ow_type_fortune_4 -->
+	</div>
+	<!-- /.ow_about_mid -->
+</div>
+<!-- /.ow_about -->

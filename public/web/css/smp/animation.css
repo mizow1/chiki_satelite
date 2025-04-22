@@ -1,0 +1,492 @@
+.ow_jutu_graph,.ow_jutu_gesshi,.ow_jutu_nisshi {
+	opacity: 0;
+}
+.ow_jutu_graph_anime {
+	animation: 1s ease 1 ow_zoom_in forwards;
+}
+.ow_jutu_gesshi_anime {
+	animation: 1s ease 1 ow_zoom_in forwards;
+}
+.ow_jutu_nisshi_anime {
+	animation: 1s ease 1 ow_zoom_in2 0.5s forwards;
+}
+@keyframes ow_zoom_in {
+	0% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes ow_zoom_in2 {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.ow_jutu_nesshi {
+	opacity: 0;
+}
+.ow_jutu_nesshi_anime {
+	animation: 1s ease 1 ow_jutu_blink 1.8s forwards;
+}
+@keyframes ow_jutu_blink {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.ow_base_jutu_1 {
+	transform: rotate(0deg);
+}
+
+.ow_base_jutu_2 {
+	transform: rotate(6deg);
+}
+
+.ow_base_jutu_3 {
+	transform: rotate(12deg);
+}
+
+.ow_base_jutu_4 {
+	transform: rotate(18deg);
+}
+
+.ow_base_jutu_5 {
+	transform: rotate(24deg);
+}
+
+.ow_base_jutu_6 {
+	transform: rotate(30deg);
+}
+
+.ow_base_jutu_7 {
+	transform: rotate(36deg);
+}
+
+.ow_base_jutu_8 {
+	transform: rotate(42deg);
+}
+
+.ow_base_jutu_9 {
+	transform: rotate(48deg);
+}
+
+.ow_base_jutu_10 {
+	transform: rotate(54deg);
+}
+
+.ow_base_jutu_11 {
+	transform: rotate(60deg);
+}
+
+.ow_base_jutu_12 {
+	transform: rotate(66deg);
+}
+
+.ow_base_jutu_13 {
+	transform: rotate(72deg);
+}
+
+.ow_base_jutu_14 {
+	transform: rotate(78deg);
+}
+
+.ow_base_jutu_15 {
+	transform: rotate(84deg);
+}
+
+.ow_base_jutu_16 {
+	transform: rotate(90deg);
+}
+
+.ow_base_jutu_17 {
+	transform: rotate(96deg);
+}
+
+.ow_base_jutu_18 {
+	transform: rotate(102deg);
+}
+
+.ow_base_jutu_19 {
+	transform: rotate(108deg);
+}
+
+.ow_base_jutu_20 {
+	transform: rotate(114deg);
+}
+
+.ow_base_jutu_21 {
+	transform: rotate(120deg);
+}
+
+.ow_base_jutu_22 {
+	transform: rotate(126deg);
+}
+
+.ow_base_jutu_23 {
+	transform: rotate(132deg);
+}
+
+.ow_base_jutu_24 {
+	transform: rotate(138deg);
+}
+
+.ow_base_jutu_25 {
+	transform: rotate(144deg);
+}
+
+.ow_base_jutu_26 {
+	transform: rotate(150deg);
+}
+
+.ow_base_jutu_27 {
+	transform: rotate(156deg);
+}
+
+.ow_base_jutu_28 {
+	transform: rotate(162deg);
+}
+
+.ow_base_jutu_29 {
+	transform: rotate(168deg);
+}
+
+.ow_base_jutu_30 {
+	transform: rotate(174deg);
+}
+
+.ow_base_jutu_31 {
+	transform: rotate(180deg);
+}
+
+.ow_base_jutu_32 {
+	transform: rotate(186deg);
+}
+
+.ow_base_jutu_33 {
+	transform: rotate(192deg);
+}
+
+.ow_base_jutu_34 {
+	transform: rotate(198deg);
+}
+
+.ow_base_jutu_35 {
+	transform: rotate(204deg);
+}
+
+.ow_base_jutu_36 {
+	transform: rotate(210deg);
+}
+
+.ow_base_jutu_37 {
+	transform: rotate(216deg);
+}
+
+.ow_base_jutu_38 {
+	transform: rotate(222deg);
+}
+
+.ow_base_jutu_39 {
+	transform: rotate(228deg);
+}
+
+.ow_base_jutu_40 {
+	transform: rotate(234deg);
+}
+
+.ow_base_jutu_41 {
+	transform: rotate(240deg);
+}
+
+.ow_base_jutu_42 {
+	transform: rotate(246deg);
+}
+
+.ow_base_jutu_43 {
+	transform: rotate(252deg);
+}
+
+.ow_base_jutu_44 {
+	transform: rotate(258deg);
+}
+
+.ow_base_jutu_45 {
+	transform: rotate(264deg);
+}
+
+.ow_base_jutu_46 {
+	transform: rotate(270deg);
+}
+
+.ow_base_jutu_47 {
+	transform: rotate(276deg);
+}
+
+.ow_base_jutu_48 {
+	transform: rotate(282deg);
+}
+
+.ow_base_jutu_49 {
+	transform: rotate(288deg);
+}
+
+.ow_base_jutu_50 {
+	transform: rotate(294deg);
+}
+
+.ow_base_jutu_51 {
+	transform: rotate(300deg);
+}
+
+.ow_base_jutu_52 {
+	transform: rotate(306deg);
+}
+
+.ow_base_jutu_53 {
+	transform: rotate(312deg);
+}
+
+.ow_base_jutu_54 {
+	transform: rotate(318deg);
+}
+
+.ow_base_jutu_55 {
+	transform: rotate(324deg);
+}
+
+.ow_base_jutu_56 {
+	transform: rotate(330deg);
+}
+
+.ow_base_jutu_57 {
+	transform: rotate(336deg);
+}
+
+.ow_base_jutu_58 {
+	transform: rotate(342deg);
+}
+
+.ow_base_jutu_59 {
+	transform: rotate(348deg);
+}
+
+.ow_base_jutu_60 {
+	transform: rotate(354deg);
+}
+
+.ow_zodiac_nisshi,
+.ow_zodiac_gesshi,
+.ow_zodiac_nenshi,
+.ow_zodiac_shadow_1,
+.ow_zodiac_shadow_2,
+.ow_zodiac_shadow_3 {
+	opacity: 0;
+}
+
+.ow_zodiac_nisshi_anime {
+	animation: 1s ease 1 pan-down forwards;
+}
+.ow_zodiac_gesshi_anime {
+	animation: 1s ease 1 pan-down 0.5s forwards;
+}
+.ow_zodiac_nenshi_anime {
+	animation: 1s ease 1 pan-down 1s forwards;
+}
+.ow_zodiac_shadow_1_anime {
+	animation: 1s ease 1 pan-down forwards;
+}
+.ow_zodiac_shadow_2_anime {
+	animation: 1s ease 1 pan-down 0.5s forwards;
+}
+.ow_zodiac_shadow_3_anime {
+	animation: 1s ease 1 pan-down 1s forwards;
+}
+
+@keyframes pan-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-5%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.ow_show_human {
+	opacity: 0;
+}
+
+.ow_show_human_anime {
+	animation: 1s ease 1 fade-in forwards;
+}
+
+.ow_show_work,
+.ow_show_work_text,
+.ow_show_heart,
+.ow_show_heart_text,
+.ow_show_originally,
+.ow_show_originally_text {
+	opacity: 0;
+}
+
+.ow_show_work_anime {
+	animation: 1s ease 1 fade-in 1s forwards;
+}
+
+.ow_show_work_text_anime {
+	animation: 1s ease 1 fade-in 1.5s forwards;
+}
+
+.ow_show_heart_anime {
+	animation: 1s ease 1 fade-in 2s forwards;
+}
+
+.ow_show_heart_text_anime {
+	animation: 1s ease 1 fade-in 2.5s forwards;
+}
+
+.ow_show_originally_anime {
+	animation: 1s ease 1 fade-in 3s forwards;
+}
+
+.ow_show_originally_text_anime {
+	animation: 1s ease 1 fade-in 3.5s forwards;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.ow_card_result,
+.ow_card_hand {
+	opacity: 0;
+}
+
+.ow_card_result_anime {
+	animation: 1s ease 1 tarot-down forwards;
+}
+
+.ow_card_hand_anime {
+	animation: 1s ease 1 tarot-down2 forwards;
+}
+
+@keyframes tarot-down {
+	0% {
+		opacity: 0;
+		top: 21%;
+	}
+	100% {
+		opacity: 1;
+		top: 41%;
+	}
+}
+
+@keyframes tarot-down2 {
+	0% {
+		opacity: 0;
+		top: 5%;
+	}
+	100% {
+		opacity: 1;
+		top: 25%;
+	}
+}
+
+.ow_star_figure_ten_2,
+.ow_star_figure_twelve_3,
+.ow_star_figure_ten_4,
+.ow_star_figure_ten_5,
+.ow_star_figure_ten_6,
+.ow_star_figure_twelve_7,
+.ow_star_figure_ten_8,
+.ow_star_figure_twelve_9,
+.ow_star_figure_hikari,
+.ow_figure_result_text {
+	opacity: 0;
+}
+
+.ow_star_figure_ten_2_anime {
+	animation: 1s ease 1 ow_zoom_in forwards;
+}
+.ow_star_figure_twelve_3_anime {
+	animation: 1s ease 1 ow_zoom_in 0.2s forwards;
+}
+.ow_star_figure_ten_4_anime {
+	animation: 1s ease 1 ow_zoom_in 0.4s forwards;
+}
+.ow_star_figure_ten_5_anime {
+	animation: 1s ease 1 ow_zoom_in 0.6s forwards;
+}
+.ow_star_figure_ten_6_anime {
+	animation: 1s ease 1 ow_zoom_in 0.8s forwards;
+}
+.ow_star_figure_twelve_7_anime {
+	animation: 1s ease 1 ow_zoom_in 1s forwards;
+}
+.ow_star_figure_ten_8_anime {
+	animation: 1s ease 1 ow_zoom_in 1.2s forwards;
+}
+.ow_star_figure_twelve_9_anime {
+	animation: 1s ease 1 ow_zoom_in 1.4s forwards;
+}
+.ow_star_figure_hikari_anime {
+	animation: 1s ease 1 ow_hikari_blink 1.9s forwards;
+}
+.ow_figure_result_text_anime {
+	animation: 1s ease 1 pan-down 2.9s forwards;
+}
+@keyframes ow_hikari_blink {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.ow_tentyuusatu_result {
+	opacity: 0;
+}
+.ow_tentyuusatu_result_anime {
+	animation: 1s ease 1 pan-down forwards;
+}
