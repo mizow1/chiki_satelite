@@ -1,6 +1,8 @@
 <?php
 require_once(MODEL.'front/controller/AbstractControllerClass.php');
 require_once(MODEL.'front/uranai/ApiModelClass.php');
+require_once(MODEL.'front/uranai/ServiceAccountSpreadsheetReader.php');
+require_once(CONFIG.'service_account_config.php');
 class MenuAction extends AbstractController{
 	function __construct($controller='',$action='',&$session_data=array(),$device=''){
 		$this->init($controller,$action,$session_data,$device);
@@ -12,6 +14,24 @@ class MenuAction extends AbstractController{
 		$api = new ApiModel();
 		$url = API_MENU.$get_data['menu'];
 		$disp_array = $api->getApi($url);
+		
+		// サービスアカウントを使用してスプレッドシートからリードコンテンツを取得
+		$spreadsheetReader = new ServiceAccountSpreadsheetReader(
+			SPREADSHEET_ID,
+			SPREADSHEET_SHEET_NAME,
+			SERVICE_ACCOUNT_KEY_FILE,
+			SPREADSHEET_CACHE_PATH,
+			SPREADSHEET_CACHE_EXPIRATION
+		);
+		
+		// メニューIDからリードコンテンツを取得
+		$menuId = isset($get_data['menu']) ? $get_data['menu'] : '';
+		$leadContent = $spreadsheetReader->getLeadContentByMenuId($menuId);
+		
+		// リードコンテンツがあれば、表示データに追加
+		if ($leadContent !== null) {
+			$disp_array['lead_content'] = $leadContent;
+		}
 		
 		$this->display($disp_array, 'entry');
 	}
