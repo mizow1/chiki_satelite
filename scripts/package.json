@@ -1,0 +1,14 @@
+{
+  "name": "lead-content-updater",
+  "version": "1.0.0",
+  "description": "スプレッドシートのデータを読み取り、HTMLファイルの.lead要素に内容を反映するスクリプト",
+  "main": "update_lead_content.js",
+  "scripts": {
+    "start": "node update_lead_content.js",
+    "setup": "node setup_auth.js"
+  },
+  "dependencies": {
+    "googleapis": "^118.0.0",
+    "node-cron": "^3.0.2"
+  }
+}
