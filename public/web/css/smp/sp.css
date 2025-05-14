@@ -2601,6 +2601,27 @@ input[type="radio"]:checked + .ow_radiotxt.female{
 
 /* △△△daily_detailページ用_サテライトサイト用に追記△△△ */
 
+.satelite_wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap:1em;
+	.item{
+		width: 30%;
+		a{
+			display: block;
+			img{
+				display: block;
+				width: 100%;
+			}
+		}
+		.text{
+			font-size: .7em;
+			padding: 1em 0;
+		}
+	}
+}
+
 
 /* Utitlity
 ----------------------------------------------------------------- */

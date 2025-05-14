@@ -163,6 +163,8 @@ img{
 	height: auto;
 }
 
+
+
 /* footer
    ----------------------------------------------------------------- */
 .ow_footer{
@@ -1416,6 +1418,11 @@ img{
 	padding: 4% 6%;
 }
 
+.lead{
+	padding: 1em;
+	font-size: 0.7em;
+}
+
 /* ow_form_body */
 .ow_form_body {
 	padding: 0 5%;
@@ -2620,6 +2627,27 @@ input[type="radio"]:checked + .ow_radiotxt.female{
 }
 
 /* △△△daily_detailページ用_サテライトサイト用に追記△△△ */
+
+.satelite_wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap:1em;
+	.item{
+		width: 30%;
+		a{
+			display: block;
+			img{
+				display: block;
+				width: 100%;
+			}
+		}
+		.text{
+			font-size: .7em;
+			padding: 1em 0;
+		}
+	}
+}
 
 /* Utitlity
 ----------------------------------------------------------------- */
