@@ -15,6 +15,18 @@ class MarketAction extends AbstractController{
         $sheet_range = urlencode($sheet_name) . '!' . $range;
         $url = "https://sheets.googleapis.com/v4/spreadsheets/{$sheet_id}/values/{$sheet_range}?key={$api_key}";
 
+        // ページ上部のリード文
+        $lead_range = urlencode($sheet_name) . '!E2';
+        $lead_url = "https://sheets.googleapis.com/v4/spreadsheets/{$sheet_id}/values/{$lead_range}?key={$api_key}";
+        $lead_response = @file_get_contents($lead_url);
+        $satelite_lead = '';
+        if ($lead_response !== false) {
+            $lead_data = json_decode($lead_response, true);
+            if (isset($lead_data['values'][0][0])) {
+                $satelite_lead = $lead_data['values'][0][0];
+            }
+        }
+
         $response = @file_get_contents($url);
         $satelite_items = array();
         if ($response !== false) {
@@ -31,16 +43,21 @@ class MarketAction extends AbstractController{
                     ) {
                         break;
                     }
-                    $satelite_items[] = array(
+                    $item = array(
                         'url'  => isset($row[0]) ? $row[0] : '',
                         'img'  => isset($row[1]) ? $row[1] : '',
                         'alt'  => isset($row[2]) ? $row[2] : '',
                         'text' => isset($row[3]) ? $row[3] : '',
                     );
+                    // url, img, text が全て空でない場合のみ追加
+                    if (trim($item['url']) !== '' && trim($item['img']) !== '' && trim($item['text']) !== '') {
+                        $satelite_items[] = $item;
+                    }
                 }
             }
         }
         $disp_array['satelite_items'] = $satelite_items;
+        $disp_array['satelite_lead'] = $satelite_lead;
         // 旧：手動配列は下記の通りコメントアウト
         /*
         $disp_array['satelite_items'] = array(
