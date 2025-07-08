@@ -11,6 +11,27 @@
 	<script type="text/javascript" src="js/form_submit.js"></script>
 	<script src="js/jquery.tile.js" type="text/javascript"></script>
 	<meta name="description" content="<!--{$article.summary}-->">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Article",
+		"headline": "<!--{$article.title|escape:'javascript'}-->",
+		"datePublished": "<!--{$article.post_date}-->",
+		"author": {
+			"@type": "Organization",
+			"name": "<!--{$smarty.const.CONTENTS_NAME}-->"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "<!--{$smarty.const.CONTENTS_NAME}-->"
+		},
+		"description": "<!--{$article.summary|escape:'javascript'}-->",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "<!--{$smarty.const.ISP_BASE_URL}-->web/column/<!--{$article.id}-->/"
+		}
+	}
+	</script>
 	<!--{include file="file:./parts/ga.html"}-->
 </head>
 <body class="ow_body">
@@ -37,7 +58,7 @@
 						<h1><!--{$article.title}--></h1>
 					</div>
 					<div class="ow_column_article_meta">
-						<span class="ow_column_post_date">投稿日：<!--{$article.post_date}--></span>
+						<span class="ow_column_post_date">公開日：<time datetime="<!--{$article.post_date}-->"><!--{$article.formatted_post_date}--></time></span>
 						<!--{if $article.seo_keywords}-->
 							<div class="ow_column_keywords">
 								<span class="ow_column_keywords_label">キーワード：</span>

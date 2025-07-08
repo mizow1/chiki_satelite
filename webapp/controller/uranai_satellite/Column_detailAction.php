@@ -17,7 +17,7 @@ class Column_detailAction extends AbstractController{
 			throw new Exception('404');
 		}
 		
-		// chiki.csvから記事データを読み込む
+		// column.csvから記事データを読み込む
 		$articles = $this->loadArticles();
 		$article = $this->findArticleById($articles, $article_id);
 		
@@ -27,6 +27,9 @@ class Column_detailAction extends AbstractController{
 		
 		// マークダウンをHTMLに変換
 		$article['content_html'] = $this->markdownToHtml($article['content']);
+		
+		// 公開日をフォーマット
+		$article['formatted_post_date'] = $this->formatPostDate($article['post_date']);
 		
 		// 他の記事（関連記事）を取得
 		$related_articles = $this->getRelatedArticles($articles, $article_id);
@@ -43,7 +46,7 @@ class Column_detailAction extends AbstractController{
 	
 	private function loadArticles(){
 		$articles = array();
-		$csv_file = dirname(dirname(dirname(dirname(__FILE__)))) . '/chiki.csv';
+		$csv_file = dirname(dirname(dirname(dirname(__FILE__)))) . '/column.csv';
 		
 		if (!file_exists($csv_file)) {
 			return $articles;
@@ -57,8 +60,17 @@ class Column_detailAction extends AbstractController{
 		// ヘッダー行をスキップ
 		$header = fgetcsv($handle);
 		
+		$now = date('Y-m-d H:i:s');
+		
 		while (($data = fgetcsv($handle)) !== false) {
 			if (count($data) >= 7) {
+				$post_date = $data[5];
+				
+				// 公開日が空欄または未来の記事は除外
+				if (empty($post_date) || $post_date > $now) {
+					continue;
+				}
+				
 				$articles[] = array(
 					'id' => $data[0],
 					'title' => $data[1],
@@ -167,5 +179,18 @@ class Column_detailAction extends AbstractController{
 		});
 		
 		return array_slice($related, 0, $limit);
+	}
+	
+	private function formatPostDate($post_date){
+		if (empty($post_date)) {
+			return '';
+		}
+		
+		$timestamp = strtotime($post_date);
+		if ($timestamp === false) {
+			return '';
+		}
+		
+		return date('Y年n月j日', $timestamp);
 	}
 }
